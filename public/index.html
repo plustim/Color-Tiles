@@ -1,0 +1,46 @@
+<!doctype HTML>
+<html>
+<head>
+<title>tiles</title>
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+$( document ).ready(function() {
+	var socket = io();
+
+	// load all the tiles
+	$.get("/api/list", function(data, status){
+		$.each(data, function(key, val){
+			// selectors cannot begin with a number!
+			$('<div/>').attr({id: val.id, class: "r" + val.color}).appendTo('body');
+		});
+	});
+
+	// flip tile when clicked
+	$("body").on("click", "div", function() {
+		socket.emit('tile change', {id: $(this).attr('id'), color: $(this).attr('class').substring(1)});
+	});
+
+	$( '#1' ).on("click", function() {
+		switch($('body').attr('class')){
+			case "light":   $('body').toggleClass('light dark'); break;
+			case "dark":   $('body').toggleClass('dark ni'); break;               
+			case "ni":   $('body').toggleClass('ni blue'); break;               
+			case "blue":   $('body').toggleClass('blue light'); break;               
+		}	
+	});
+
+	// update tiles from server
+	socket.on('tile change', function(data){
+		console.log(data);
+		$("div#" + data.id).removeClass().addClass("r" + data.color);
+    });
+});	
+</script>
+</head>
+<body class='light'>
+</html>

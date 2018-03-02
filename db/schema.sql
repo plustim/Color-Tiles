@@ -1,0 +1,9 @@
+CREATE DATABASE color_tiles;
+USE color_tiles;
+
+CREATE TABLE tiles(
+	id INT(10) AUTO_INCREMENT NOT NULL,
+	color INT(1) DEFAULT 0,
+	/*updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP,*/
+	PRIMARY KEY (id)
+)

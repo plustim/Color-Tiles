@@ -1,0 +1,31 @@
+{
+  "name": "color-tiles",
+  "version": "1.0.0",
+  "description": "color tiles in real time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plustim/Color-Tiles.git"
+  },
+  "keywords": [
+    "node",
+    "websockets",
+    "socket.io"
+  ],
+  "author": "tim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plustim/Color-Tiles/issues"
+  },
+  "homepage": "https://github.com/plustim/Color-Tiles#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0",
+    "socket.io": "^2.0.4"
+  }
+}

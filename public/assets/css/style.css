@@ -1,0 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Share+Tech);
+html{
+	height:100%;
+}
+body{
+	height:100%;
+	padding:0;
+	margin:0 0.5% 0 0;
+	background: #black; /* Old browsers */
+	background: linear-gradient(to bottom,  #000000 0%,#141a21 100%); /* W3C */
+	overflow:hidden;
+}
+div{
+	font-family:'Share Tech', sans-serif;
+	font-size:40px;
+	color:#fff;
+	text-shadow:0 0 7px #fff;
+	text-align:center;
+	height:48px;
+	width:3.5%;
+	float:left;
+	background:#000;
+	border-radius:5px;
+	margin:0.5% 0px 0px 0.5%;
+	cursor:pointer;
+	box-shadow:0 0 0px black inset;
+	transition-property: all;
+	transition-duration: .9s;
+	-moz-transition-property: all; /* Firefox 4 */
+	-moz-transition-duration: .9s; /* Firefox 4 */
+	-webkit-transition-property: all; /* Safari and Chrome */
+	-webkit-transition-duration: .9s; /* Safari and Chrome */
+	-o-transition-property: all; /* Opera */
+	-o-transition-duration: .9s; /* Opera */
+}
+div.r1{
+	background:#c70039;
+}
+div.r2{
+	background:#57c785;
+}
+div.r3{
+	background:#2a7b9b;
+}
+div.r4{
+	background:#ffde71;
+}
+
+/* color palette */
+body.dark div.square1{
+	background:#777;
+}
+body.dark div.square2{
+	background:#bbb;
+}
+body.dark div.square3{
+	background:#fff;
+}
+body.dark div.square4{
+	background:#a00;
+}
+
+/* nicole's colors */
+body.ni div.square1{
+	background:#d5910f;
+}
+body.ni div.square2{
+	background:#0fd5ad;
+}
+body.ni div.square3{
+	background:#880fd5;
+}
+body.ni div.square4{
+	background:#d5c00f;
+}
+
+/* blues */
+body.blue div.square1{
+	background:#66ccff;
+}
+body.blue div.square2{
+	background:#0066ff;
+}
+body.blue div.square3{
+	background:#0033cc;
+}
+body.blue div.square4{
+	background:#99ccff;
+}
+
+
+div:hover{
+	box-shadow:0 0 4px white inset;
+	transition-property: all;
+	transition-duration: .0s;
+	-moz-transition-property: all; /* Firefox 4 */
+	-moz-transition-duration: .0s; /* Firefox 4 */
+	-webkit-transition-property: all; /* Safari and Chrome */
+	-webkit-transition-duration: .0s; /* Safari and Chrome */
+	-o-transition-property: all; /* Opera */
+	-o-transition-duration: .0s; /* Opera */
+}
+
+@media (max-width:650px){
+	body{
+		margin:0 1% 0 0;
+	}
+	div{
+		width:9%;
+		margin:1% 0px 0px 1%;
+	}
+}
+
+@media (max-width:650px){
+	body{
+		margin:0 1% 0 0;
+	}
+	div{
+		width:9%;
+		margin:1% 0px 0px 1%;
+	}
+}
