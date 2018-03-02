@@ -16,6 +16,8 @@ app.use(methodOverride("_method"));
 // routes
 var routes = require("./controllers/tiles_controller.js");
 
+var tiles = require("./models/tiles.js");
+
 io.on('connection', function(socket){
 	console.log('a user connected');
 	socket.on('disconnect', function(){
@@ -26,7 +28,7 @@ io.on('connection', function(socket){
 		// TODO: validate data to prevent arbitrary data from being sent
 		color = 1 * data.color + 1;
 		if( color > 4 || color < 0 ) color = 0;
-		// save color in db
+		tiles.flip(1 * data.id, color);
 		io.emit('tile change', {id: data.id, color: color});
 	});
 });
